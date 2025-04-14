@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flip Form Design</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="main-container">
+        <div class="card">
+            <div class="inner-box">
+                <div class="card-front">
+                    <h2>Login</h2>
+                    <form>
+                        <input type="text" placeholder="User ID" required>
+                        <input type="password" placeholder="Password" required>
+                        <button type="submit" class="btn">Login</button>
+                        <p class="flip-text">Don't have an account? <span onclick="showRegister()">Register</span></p>
+                    </form>
+                </div>
+                <div class="card-back">
+                    <h2>Register</h2>
+                    <form>
+                        <input type="text" placeholder="UID" required>
+                        <input type="FACEBOOK User NAME" placeholder="FACEBOOK User NAME" required>
+                        <input type="text" placeholder="Mobile Number" required>
+                        <input type="password" placeholder="Password" required>
+                        <button type="submit" class="btn">Register</button>
+                        <p class="flip-text">Already have an account? <span onclick="showLogin()">Login</span></p>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function showRegister() {
+            document.querySelector('.inner-box').style.transform = 'rotateY(180deg)';
+        }
+
+        function showLogin() {
+            document.querySelector('.inner-box').style.transform = 'rotateY(0deg)';
+        }
+    </script>
+</body>
+</html>
